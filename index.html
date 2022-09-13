@@ -67,7 +67,7 @@
       <section class="section-tittle">
         <div class="container hero-container">
           <h1 class="maine-tittle">Ефективні рішення для вашого бізнесу</h1>
-          <button class="maine-btn" type="button">Замовити послугу</button>
+          <button class="maine-btn" type="button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
 
@@ -131,31 +131,46 @@
           <div class="benefits-group">
             <ul class="list-benefits list">
               <li class="item-benefits">
-                <img
-                  class="img-benefits img"
-                  src="./images/web-studio/box-1.jpeg"
-                  alt="фото роботи над версткою сайту"
-                  width="370"
-                  height="294"
-                />
+                <div class="thumb-benefits">
+                  <img
+                    class="img-benefits img"
+                    src="./images/web-studio/box-1.jpeg"
+                    alt="фото роботи над версткою сайту"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="thumb-benif-group"
+                    ><p class="thumb-benif-desc">Десктопні додатки</p></div
+                  >
+                </div>
               </li>
               <li class="item-benefits">
-                <img
-                  class="img-benefits img"
-                  src="./images/web-studio/box-2.jpeg"
-                  alt="фото адаптації сторінки на мобільни пристрої"
-                  width="370"
-                  height="294"
-                />
+                <div class="thumb-benefits">
+                  <img
+                    class="img-benefits img"
+                    src="./images/web-studio/box-2.jpeg"
+                    alt="фото адаптації сторінки на мобільни пристрої"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="thumb-benif-group"
+                    ><p class="thumb-benif-desc">Мобільні додатки</p></div
+                  >
+                </div>
               </li>
               <li class="item-benefits">
-                <img
-                  class="img-benefits img"
-                  src="./images/web-studio/box-3.jpeg"
-                  alt="фото оптимізації кольорів"
-                  width="370"
-                  height="294"
-                />
+                <div class="thumb-benefits">
+                  <img
+                    class="img-benefits img"
+                    src="./images/web-studio/box-3.jpeg"
+                    alt="фото оптимізації кольорів"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="thumb-benif-group"
+                    ><p class="thumb-benif-desc">Дизайнерські рішення </p></div
+                  >
+                </div>
               </li>
             </ul>
           </div>
@@ -558,5 +573,19 @@
         </div>
       </div>
     </footer>
+
+    <!-- Modal window -->
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="close-btn" type="button" data-modal-close>
+          <svg class="close-window" width="30" height="30">
+            <use href="./images/icons.svg#icon-close-black"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
