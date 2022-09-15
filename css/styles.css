@@ -693,7 +693,7 @@ p {
 
 .backdrop.is-hidden .modal {
   transform: translate(-200%, -100%) scale(0.7) rotate(-360deg);
-  transition: transform var(--animation-modal);
+  transition: visibility var(--animation-modal), transform var(--animation-modal);
 }
 
 .modal {
