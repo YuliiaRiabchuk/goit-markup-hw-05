@@ -23,6 +23,7 @@
   --grey-border-cl: #ececec;
   --light-border-cl: #eeeeee;
   --animation-hover: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-modal: 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Reset */
@@ -681,14 +682,18 @@ p {
   height: 100%;
 
   background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity var(--animation-hover);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+}
 
-  transform: translate(-200%, -100%) scale(0.7) rotate(0deg) opacity(0);
+.backdrop.is-hidden .modal {
+  transform: translate(-200%, -100%) scale(0.7) rotate(-360deg);
+  transition: transform var(--animation-modal);
 }
 
 .modal {
@@ -705,12 +710,12 @@ p {
   border-radius: 4px;
 
   transform: translate(-50%, -50%) scale(1) rotate(360deg);
-  transition: transform var(--animation-hover);
+  transition: transform var(--animation-modal);
 
-  animation: anim-modal 1500ms linear;
+  /* animation: anim-modal 1500ms linear; */
 }
 
-@keyframes anim-modal {
+/* @keyframes anim-modal {
   0% {
     opacity: 0;
   }
@@ -722,7 +727,7 @@ p {
   100% {
     opacity: 1;
   }
-}
+} */
 
 .close-btn {
   position: absolute;
